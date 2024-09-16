@@ -36,6 +36,6 @@ topology:
       kind: bridge
        
   links:
-   - endpoints: ["Pc1:eth1", "router1:eth1"]
+   - endpoints: ["PC1:eth1", "router1:eth1"]
    - endpoints: ["router1:eth2", "router2:eth1"]
    - endpoints: ["router2:eth2", "PC2:eth1"]
