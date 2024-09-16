@@ -32,8 +32,6 @@ topology:
       exec:
       - ip -6 route del default dev eth0
 
-    br-clab1:
-      kind: bridge
        
   links:
    - endpoints: ["PC1:eth1", "router1:eth1"]
