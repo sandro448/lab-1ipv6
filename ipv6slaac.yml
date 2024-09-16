@@ -25,25 +25,12 @@ topology:
         - router2/frr.conf:/etc/frr/frr.conf
       exec:
        - "sysctl -w net.ipv6.conf.all.forwarding=1"
-
-
-
-
-
-
-    
-    PC1:
+       
+    PC2:
       kind: linux
       image: docker.io/esanchezv/kaliipv6v2:latest
       exec:
       - ip -6 route del default dev eth0
-          
-    PC3:
-      kind: linux
-      image: praqma/network-multitool:extra
-      exec:
-      - ip -6 route del default dev eth0
-      
 
     br-clab1:
       kind: bridge
